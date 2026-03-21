@@ -55,7 +55,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
           padding: const EdgeInsets.symmetric(horizontal: 12),
           decoration: BoxDecoration(
             color: const Color(0xFF2A2A2E),
-            border: Border(bottom: BorderSide(color: Colors.white.withOpacity(0.06))),
+            border: Border(bottom: BorderSide(color: Colors.white.withValues(alpha: 0.06))),
           ),
           child: Row(
             children: [
@@ -75,7 +75,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                       prefixIcon: const Icon(Icons.search, size: 14, color: Colors.white38),
                       prefixIconConstraints: const BoxConstraints(minWidth: 32),
                       filled: true,
-                      fillColor: Colors.black.withOpacity(0.3),
+                      fillColor: Colors.black.withValues(alpha: 0.3),
                       contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
                       border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(6),

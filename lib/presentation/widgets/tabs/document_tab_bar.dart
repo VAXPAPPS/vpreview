@@ -47,8 +47,8 @@ class DocumentTabBar extends StatelessWidget {
         return Container(
           height: 36,
           decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.2),
-            border: Border(bottom: BorderSide(color: Colors.white.withOpacity(0.06))),
+            color: Colors.black.withValues(alpha: 0.2),
+            border: Border(bottom: BorderSide(color: Colors.white.withValues(alpha: 0.06))),
           ),
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
@@ -63,13 +63,13 @@ class DocumentTabBar extends StatelessWidget {
                   duration: const Duration(milliseconds: 200),
                   padding: const EdgeInsets.symmetric(horizontal: 12),
                   decoration: BoxDecoration(
-                    color: isActive ? Colors.white.withOpacity(0.08) : Colors.transparent,
+                    color: isActive ? Colors.white.withValues(alpha: 0.08) : Colors.transparent,
                     border: Border(
                       bottom: BorderSide(
                         color: isActive ? _getTabColor(doc.documentType) : Colors.transparent,
                         width: 2,
                       ),
-                      right: BorderSide(color: Colors.white.withOpacity(0.04)),
+                      right: BorderSide(color: Colors.white.withValues(alpha: 0.04)),
                     ),
                   ),
                   child: Row(

@@ -135,7 +135,7 @@ class _DocumentViewerPageState extends State<DocumentViewerPage> {
                     child: Container(
                       padding: const EdgeInsets.all(32),
                       decoration: BoxDecoration(
-                        color: const Color(0xFF667EEA).withOpacity(0.2),
+                        color: const Color(0xFF667EEA).withValues(alpha: 0.2),
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: const Color(0xFF667EEA), width: 2),
                       ),

@@ -46,7 +46,7 @@ class _WelcomePageState extends State<WelcomePage> {
                 borderRadius: BorderRadius.circular(20),
                 boxShadow: [
                   BoxShadow(
-                    color: const Color(0xFF667EEA).withOpacity(0.3),
+                    color: const Color(0xFF667EEA).withValues(alpha: 0.3),
                     blurRadius: 20,
                     offset: const Offset(0, 8),
                   ),
@@ -69,7 +69,7 @@ class _WelcomePageState extends State<WelcomePage> {
             const SizedBox(height: 8),
             Text(
               'عارض المستندات الاحترافي',
-              style: TextStyle(fontSize: 14, color: Colors.white.withOpacity(0.5)),
+              style: TextStyle(fontSize: 14, color: Colors.white.withValues(alpha: 0.5)),
             ),
             const SizedBox(height: 48),
 
@@ -215,13 +215,13 @@ class _ActionCardState extends State<_ActionCard> {
           width: 160,
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
-            color: _isHovered ? widget.color.withOpacity(0.15) : Colors.white.withOpacity(0.05),
+            color: _isHovered ? widget.color.withValues(alpha: 0.15) : Colors.white.withValues(alpha: 0.05),
             borderRadius: BorderRadius.circular(16),
             border: Border.all(
-              color: _isHovered ? widget.color.withOpacity(0.4) : Colors.white.withOpacity(0.08),
+              color: _isHovered ? widget.color.withValues(alpha: 0.4) : Colors.white.withValues(alpha: 0.08),
             ),
             boxShadow: _isHovered ? [
-              BoxShadow(color: widget.color.withOpacity(0.1), blurRadius: 16, offset: const Offset(0, 4)),
+              BoxShadow(color: widget.color.withValues(alpha: 0.1), blurRadius: 16, offset: const Offset(0, 4)),
             ] : [],
           ),
           child: Column(
@@ -235,7 +235,7 @@ class _ActionCardState extends State<_ActionCard> {
               const SizedBox(height: 4),
               Text(
                 widget.subtitle,
-                style: TextStyle(fontSize: 11, color: Colors.white.withOpacity(0.4)),
+                style: TextStyle(fontSize: 11, color: Colors.white.withValues(alpha: 0.4)),
               ),
             ],
           ),
@@ -295,7 +295,7 @@ class _RecentFileItemState extends State<_RecentFileItem> {
           padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
           margin: const EdgeInsets.only(bottom: 2),
           decoration: BoxDecoration(
-            color: _isHovered ? Colors.white.withOpacity(0.05) : Colors.transparent,
+            color: _isHovered ? Colors.white.withValues(alpha: 0.05) : Colors.transparent,
             borderRadius: BorderRadius.circular(8),
           ),
           child: Row(
@@ -313,7 +313,7 @@ class _RecentFileItemState extends State<_RecentFileItem> {
                     ),
                     Text(
                       p.dirname(widget.filePath),
-                      style: TextStyle(fontSize: 10, color: Colors.white.withOpacity(0.3)),
+                      style: TextStyle(fontSize: 10, color: Colors.white.withValues(alpha: 0.3)),
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],
@@ -340,9 +340,9 @@ class _FormatChip extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Text(
         label,

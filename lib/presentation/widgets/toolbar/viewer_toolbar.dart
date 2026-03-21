@@ -21,8 +21,8 @@ class ViewerToolbar extends StatelessWidget {
           height: 36,
           padding: const EdgeInsets.symmetric(horizontal: 8),
           decoration: BoxDecoration(
-            color: Colors.black.withOpacity(0.15),
-            border: Border(bottom: BorderSide(color: Colors.white.withOpacity(0.06))),
+            color: Colors.black.withValues(alpha: 0.15),
+            border: Border(bottom: BorderSide(color: Colors.white.withValues(alpha: 0.06))),
           ),
           child: Row(
             children: [
@@ -115,7 +115,7 @@ class ViewerToolbar extends StatelessWidget {
   Widget _divider() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 4),
-      child: Container(width: 1, height: 18, color: Colors.white.withOpacity(0.08)),
+      child: Container(width: 1, height: 18, color: Colors.white.withValues(alpha: 0.08)),
     );
   }
 
@@ -167,9 +167,9 @@ class _ToolbarButtonState extends State<_ToolbarButton> {
             padding: const EdgeInsets.all(6),
             decoration: BoxDecoration(
               color: widget.isActive
-                  ? Colors.white.withOpacity(0.12)
+                  ? Colors.white.withValues(alpha: 0.12)
                   : _isHovered
-                      ? Colors.white.withOpacity(0.06)
+                      ? Colors.white.withValues(alpha: 0.06)
                       : Colors.transparent,
               borderRadius: BorderRadius.circular(4),
             ),

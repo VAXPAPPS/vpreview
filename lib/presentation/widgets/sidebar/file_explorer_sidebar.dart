@@ -13,8 +13,8 @@ class FileExplorerSidebar extends StatelessWidget {
     return Container(
       width: 260,
       decoration: BoxDecoration(
-        color: Colors.black.withOpacity(0.3),
-        border: Border(right: BorderSide(color: Colors.white.withOpacity(0.06))),
+        color: Colors.black.withValues(alpha: 0.3),
+        border: Border(right: BorderSide(color: Colors.white.withValues(alpha: 0.06))),
       ),
       child: Column(
         children: [
@@ -23,7 +23,7 @@ class FileExplorerSidebar extends StatelessWidget {
             height: 40,
             padding: const EdgeInsets.symmetric(horizontal: 12),
             decoration: BoxDecoration(
-              border: Border(bottom: BorderSide(color: Colors.white.withOpacity(0.06))),
+              border: Border(bottom: BorderSide(color: Colors.white.withValues(alpha: 0.06))),
             ),
             child: Row(
               children: [
