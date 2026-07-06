@@ -29,7 +29,7 @@ class ViewerToolbar extends StatelessWidget {
               // Open file button
               _ToolbarButton(
                 icon: Icons.folder_open,
-                tooltip: 'فتح ملف (Ctrl+O)',
+                tooltip: 'Open file (Ctrl+O)',
                 onPressed: () => _openFile(context),
               ),
               _divider(),
@@ -37,7 +37,7 @@ class ViewerToolbar extends StatelessWidget {
               // Zoom controls
               _ToolbarButton(
                 icon: Icons.zoom_out,
-                tooltip: 'تصغير',
+                tooltip: 'Zoom out',
                 onPressed: () => context.read<ViewerSettingsBloc>().add(const ZoomOut()),
               ),
               Padding(
@@ -49,12 +49,12 @@ class ViewerToolbar extends StatelessWidget {
               ),
               _ToolbarButton(
                 icon: Icons.zoom_in,
-                tooltip: 'تكبير',
+                tooltip: 'Zoom in',
                 onPressed: () => context.read<ViewerSettingsBloc>().add(const ZoomIn()),
               ),
               _ToolbarButton(
                 icon: Icons.fit_screen,
-                tooltip: 'إعادة ضبط',
+                tooltip: 'Reset',
                 onPressed: () => context.read<ViewerSettingsBloc>().add(const ResetZoom()),
               ),
               _divider(),
@@ -63,7 +63,7 @@ class ViewerToolbar extends StatelessWidget {
               if (settings.totalPages > 1) ...[
                 _ToolbarButton(
                   icon: Icons.navigate_before,
-                  tooltip: 'الصفحة السابقة',
+                  tooltip: 'Previous page',
                   onPressed: settings.currentPage > 1
                     ? () => context.read<ViewerSettingsBloc>().add(GoToPage(settings.currentPage - 1))
                     : null,
@@ -74,7 +74,7 @@ class ViewerToolbar extends StatelessWidget {
                 ),
                 _ToolbarButton(
                   icon: Icons.navigate_next,
-                  tooltip: 'الصفحة التالية',
+                  tooltip: 'Next page',
                   onPressed: settings.currentPage < settings.totalPages
                     ? () => context.read<ViewerSettingsBloc>().add(GoToPage(settings.currentPage + 1))
                     : null,
@@ -87,14 +87,14 @@ class ViewerToolbar extends StatelessWidget {
               // Search
               _ToolbarButton(
                 icon: Icons.search,
-                tooltip: 'بحث (Ctrl+F)',
+                tooltip: 'Search (Ctrl+F)',
                 onPressed: () => context.read<SearchBloc>().add(const ToggleSearchBar()),
               ),
 
               // Thumbnails toggle
               _ToolbarButton(
                 icon: Icons.view_sidebar_outlined,
-                tooltip: 'المصغرات',
+                tooltip: 'Thumbnails',
                 isActive: settings.showThumbnails,
                 onPressed: () => context.read<ViewerSettingsBloc>().add(const ToggleThumbnails()),
               ),
@@ -102,7 +102,7 @@ class ViewerToolbar extends StatelessWidget {
               // Fullscreen
               _ToolbarButton(
                 icon: settings.isFullScreen ? Icons.fullscreen_exit : Icons.fullscreen,
-                tooltip: settings.isFullScreen ? 'خروج من ملء الشاشة' : 'ملء الشاشة (F11)',
+                tooltip: settings.isFullScreen ? 'Exit full screen' : 'Full screen (F11)',
                 onPressed: () => context.read<ViewerSettingsBloc>().add(const ToggleFullScreen()),
               ),
             ],

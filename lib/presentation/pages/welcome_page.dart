@@ -68,7 +68,7 @@ class _WelcomePageState extends State<WelcomePage> {
             ),
             const SizedBox(height: 8),
             Text(
-              'عارض المستندات الاحترافي',
+              'Professional Document Viewer',
               style: TextStyle(fontSize: 14, color: Colors.white.withValues(alpha: 0.5)),
             ),
             const SizedBox(height: 48),
@@ -79,7 +79,7 @@ class _WelcomePageState extends State<WelcomePage> {
               children: [
                 _ActionCard(
                   icon: Icons.file_open,
-                  label: 'فتح ملف',
+                  label: 'Open File',
                   subtitle: 'Ctrl + O',
                   color: const Color(0xFF42A5F5),
                   onTap: () => _openFile(context),
@@ -87,8 +87,8 @@ class _WelcomePageState extends State<WelcomePage> {
                 const SizedBox(width: 16),
                 _ActionCard(
                   icon: Icons.folder_open,
-                  label: 'فتح مجلد',
-                  subtitle: 'تصفح الملفات',
+                  label: 'Open Folder',
+                  subtitle: 'Browse Files',
                   color: const Color(0xFFFFAB40),
                   onTap: () => _openFolder(context),
                 ),
@@ -111,13 +111,13 @@ class _WelcomePageState extends State<WelcomePage> {
                         const Icon(Icons.history, size: 16, color: Colors.white38),
                         const SizedBox(width: 8),
                         const Text(
-                          'الملفات الأخيرة',
+                          'Recent Files',
                           style: TextStyle(fontSize: 13, fontWeight: FontWeight.w600, color: Colors.white54),
                         ),
                         const Spacer(),
                         TextButton(
                           onPressed: () => context.read<RecentFilesBloc>().add(const ClearRecentFiles()),
-                          child: const Text('مسح', style: TextStyle(fontSize: 11, color: Colors.white24)),
+                          child: const Text('Clear', style: TextStyle(fontSize: 11, color: Colors.white24)),
                         ),
                       ],
                     ),

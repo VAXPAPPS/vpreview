@@ -31,7 +31,7 @@ class FileExplorerSidebar extends StatelessWidget {
                 const SizedBox(width: 8),
                 const Expanded(
                   child: Text(
-                    'مستكشف الملفات',
+                    'File Explorer',
                     style: TextStyle(fontSize: 12, fontWeight: FontWeight.w600, color: Colors.white70),
                   ),
                 ),
@@ -60,7 +60,7 @@ class FileExplorerSidebar extends StatelessWidget {
                 if (state is FileExplorerLoaded) {
                   if (state.nodes.isEmpty) {
                     return const Center(
-                      child: Text('لا توجد ملفات مدعومة', style: TextStyle(color: Colors.white38, fontSize: 12)),
+                      child: Text('No supported files', style: TextStyle(color: Colors.white38, fontSize: 12)),
                     );
                   }
                   return ListView.builder(
@@ -73,7 +73,7 @@ class FileExplorerSidebar extends StatelessWidget {
                   );
                 }
                 return const Center(
-                  child: Text('اختر مجلداً لتصفحه', style: TextStyle(color: Colors.white38, fontSize: 12)),
+                  child: Text('Choose a folder to browse', style: TextStyle(color: Colors.white38, fontSize: 12)),
                 );
               },
             ),

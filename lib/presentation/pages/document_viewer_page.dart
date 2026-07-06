@@ -145,7 +145,7 @@ class _DocumentViewerPageState extends State<DocumentViewerPage> {
                           Icon(Icons.file_download, size: 48, color: Color(0xFF667EEA)),
                           SizedBox(height: 16),
                           Text(
-                            'أفلت الملف هنا لفتحه',
+                            'Drop file here to open',
                             style: TextStyle(fontSize: 18, color: Colors.white, fontWeight: FontWeight.w600),
                           ),
                         ],

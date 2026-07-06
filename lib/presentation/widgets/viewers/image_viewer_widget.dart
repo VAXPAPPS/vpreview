@@ -33,7 +33,7 @@ class ImageViewerWidget extends StatelessWidget {
           children: [
             Icon(Icons.broken_image, size: 64, color: Colors.white38),
             SizedBox(height: 16),
-            Text('فشل تحميل الصورة', style: TextStyle(color: Colors.white54)),
+            Text('Failed to load image', style: TextStyle(color: Colors.white54)),
           ],
         ),
       ),

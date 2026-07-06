@@ -37,7 +37,7 @@ class ViewerFactory {
               Icon(Icons.error_outline, size: 64, color: Colors.white38),
               SizedBox(height: 16),
               Text(
-                'نوع الملف غير مدعوم',
+                'Unsupported file type',
                 style: TextStyle(fontSize: 18, color: Colors.white54),
               ),
             ],

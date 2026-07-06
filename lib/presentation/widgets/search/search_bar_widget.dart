@@ -70,7 +70,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                     onSubmitted: (_) => context.read<SearchBloc>().add(const NextResult()),
                     style: const TextStyle(fontSize: 12, color: Colors.white),
                     decoration: InputDecoration(
-                      hintText: 'بحث...',
+                      hintText: 'Search...',
                       hintStyle: const TextStyle(fontSize: 12, color: Colors.white24),
                       prefixIcon: const Icon(Icons.search, size: 14, color: Colors.white38),
                       prefixIconConstraints: const BoxConstraints(minWidth: 32),
@@ -94,7 +94,7 @@ class _SearchBarWidgetState extends State<SearchBarWidget> {
                   child: Text(
                     state.hasMatches
                         ? '${state.currentMatchIndex + 1}/${state.totalMatches}'
-                        : 'لا نتائج',
+                        : 'No results',
                     style: TextStyle(
                       fontSize: 11,
                       color: state.hasMatches ? Colors.white54 : Colors.redAccent,
